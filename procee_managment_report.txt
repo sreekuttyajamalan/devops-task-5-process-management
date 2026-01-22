@@ -1,0 +1,31 @@
+PROCESS MANAGEMENT REPORT
+
+1. What is PID
+PID stands for Process ID.
+It is a unique number assigned by the Linux operating system to every running process.
+The system uses PID to track, manage, and control processes.
+Example: When we use the kill command, we use the PID to stop a specific process.
+
+2. Difference between kill and kill -9
+The kill command sends a signal to a process asking it to terminate gracefully.
+By default, kill sends signal 15 (SIGTERM), allowing the process to clean up resources before stopping.
+The kill -9 command sends signal 9 (SIGKILL), which forcefully stops the process immediately.
+kill -9 should be used only when a process does not respond to normal kill commands.
+
+3. What is a daemon
+A daemon is a background process that runs continuously without user interaction.
+Daemons usually start at system boot and provide services.
+Examples include web servers, database servers, and SSH services.
+Daemon processes usually have names ending with the letter 'd', such as sshd.
+
+4. What is systemctl
+systemctl is a command used to control and manage system services in Linux.
+It is part of the systemd system and service manager.
+systemctl can start, stop, restart, and check the status of services.
+Example: systemctl status nginx
+
+5. What happens when CPU spikes
+A CPU spike occurs when one or more processes suddenly use a large amount of CPU.
+This can cause the system to slow down or become unresponsive.
+High CPU usage may be caused by heavy applications, infinite loops, or misconfigured services.
+Administrators use tools like top to identify processes causing CPU spikes.
